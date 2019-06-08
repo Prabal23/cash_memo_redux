@@ -252,12 +252,12 @@ class _AddtoListState extends State<AddtoList>{
     String amount = item_cost;
     int money = int.parse(amount);
     int cost = store.state.counting + money; 
-    int count = store.state.item_id;
-    count++;
+    int id = store.state.item_id;
+    id++;
     setState((){
-      _addItemlist(count, _currentMonth, item_type, item_cost);
+      _addItemlist(id, _currentMonth, item_type, item_cost);
       _addTotal(cost);
-      _addID(count);
+      _addID(id);
     });
     // _addItemlist(count, _currentMonth, item_type, item_cost);
     // _addTotal(cost);
